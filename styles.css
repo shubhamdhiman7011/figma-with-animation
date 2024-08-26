@@ -90,9 +90,8 @@ nav ul li a:hover::after {
 
 .hero {
     padding: 100px 20px;
-    background-image: url('hero-bg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.png') no-repeat center center;
     background-size: cover;
-    background-position: center;
     color: white;
     animation: fadeIn 2s ease;
 }
@@ -101,7 +100,9 @@ nav ul li a:hover::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px; /* Adjust the gap between text and image as needed */
+    gap: 30px; /* Increased gap for better spacing */
+    max-width: 1200px;
+    margin: 0 auto; /* Center align hero-content */
 }
 
 .hero-text {
@@ -110,19 +111,20 @@ nav ul li a:hover::after {
 }
 
 .hero-text h1 {
-    font-size: 3rem;
+    font-size: 4rem; /* Increased font size */
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .hero-text h1 span {
     color: #F9C712;
+    font-weight: bold; /* Bold the highlighted text */
 }
 
 .hero-text p {
-    max-width: 600px;
+    max-width: 700px; /* Increased max-width for better readability */
     margin: 20px 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Slightly larger font size */
     animation: fadeIn 1.5s ease;
 }
 
@@ -132,14 +134,16 @@ nav ul li a:hover::after {
     padding: 15px 30px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: transform 0.3s ease;
+    border-radius: 50px; /* Rounded button corners */
+    font-size: 1.1rem; /* Slightly larger font size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 1.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .cta-button:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .hero-image {
@@ -150,9 +154,10 @@ nav ul li a:hover::after {
 }
 
 .hero-image img {
-    width: 324px;
-    height: 324px;
-    opacity: 1;
+    width: 350px; /* Slightly larger image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 /* Animations */
@@ -197,6 +202,7 @@ nav ul li a:hover::after {
         opacity: 1;
     }
 }
+
 
 .products {
     padding: 50px 20px;
